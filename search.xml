@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>CSS3</title>
+    <url>/2022/01/11/CSS3/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>CSS3</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>ES6 Docerator</title>
+    <url>/2022/01/11/ES6/</url>
+    <content><![CDATA[<h2 id="ES6-装饰器函数"><a href="#ES6-装饰器函数" class="headerlink" title="ES6 装饰器函数"></a>ES6 装饰器函数</h2>]]></content>
+      <categories>
+        <category>ES6</category>
+      </categories>
+      <tags>
+        <tag>JS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>http与https</title>
+    <url>/2022/01/12/%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="http是什么？http和https的区别？"><a href="#http是什么？http和https的区别？" class="headerlink" title="http是什么？http和https的区别？"></a>http是什么？http和https的区别？</h2><h4 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h4><h5 id="1-http"><a href="#1-http" class="headerlink" title="1.http"></a>1.http</h5><ul>
+<li>http(HyperText Transfer Protocal)超文本传输协议,是实现网络通信的一种规范,也是应用最为广泛的网络协议之一,常用于在web浏览器和网站服务器之间传递信息以<strong>明文</strong>方式发送内容，不提供任何方式的数据加密 <span id="more"></span></li>
+<li>特点：<ul>
+<li>支持客户/服务器模式(Client/Broswer)</li>
+<li>简单快速:客户向服务器请求服务时，只需传送请求方法和路径。由于HTTP协议简单，使得HTTP服务器的程序规模小，因而通信速度很快</li>
+<li>灵活：HTTP允许传输任意类型的数据对象，正在传输的类型由Content-Type加以标记</li>
+<li>无连接：无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间</li>
+<li>无状态：HTTP协议无法根据之前的状态进行本次的请求处理</li>
+</ul>
+</li>
+</ul>
+<h5 id="2-https"><a href="#2-https" class="headerlink" title="2.https"></a>2.https</h5><ul>
+<li>是以安全为目标的HTTP通道，由于http是明文传输，很不安全，为了保障隐私数据能够加密传输，让HTTP运行在安全的SSL/TLS协议上，即<code>HTTPS = HTTP + SSL/TLS</code>,通过SSL证书来验证服务器的身份，并为浏览器和服务器之间的通信进行加密<ul>
+<li>SSL协议位于TCP/IP协议与各种应用层协议之间，浏览器和服务器在使用SSL建立连接时需要选择一组恰当的加密算法来实现安全通信，为数据通讯提供安全支持</li>
+</ul>
+</li>
+<li>通信流程<ul>
+<li>首先客户端通过URL访问服务器建立SSL连接</li>
+<li>服务端收到客户端请求后，会将网站支持的证书信息（证书中包含公钥）传送一份给客户端</li>
+<li>客户端的服务器开始协商SSL连接的安全等级，也就是信息加密的等级</li>
+<li>客户端的浏览器根据双方同意的安全等级，建立会话密钥，然后利用网站的公钥将会话密钥加密，并传送给网站</li>
+<li>服务器利用自己的私钥解密出会话密钥</li>
+<li>服务器利用会话密钥加密与客户端之间的通信<h4 id="二、区别"><a href="#二、区别" class="headerlink" title="二、区别"></a>二、区别</h4></li>
+</ul>
+</li>
+<li>HTTPS是HTTP协议的安全版本，HTTP协议的数据传输是明文的，是不安全的，HTTPS使用了SSL/TLS协议进行了加密处理，相对更安全</li>
+<li>HTTP 和 HTTPS 使用连接方式不同，默认端口也不一样，HTTP是80，HTTPS是443</li>
+<li>HTTPS 由于需要设计加密以及多次握手，性能方面不如 HTTP</li>
+<li>HTTPS需要SSL，SSL 证书需要钱，功能越强大的证书费用越高</li>
+</ul>
+]]></content>
+      <categories>
+        <category>面试题</category>
+      </categories>
+      <tags>
+        <tag>前端面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>var、let、const的区别</title>
+    <url>/2022/01/19/var%E3%80%81let%E3%80%81const/</url>
+    <content><![CDATA[<h2 id="var、let、const之间的区别"><a href="#var、let、const之间的区别" class="headerlink" title="var、let、const之间的区别"></a>var、let、const之间的区别</h2><h4 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h4><h5 id="1-var"><a href="#1-var" class="headerlink" title="1.var"></a>1.var</h5><ul>
+<li>在ES5中，顶层对象的属性和全局变量是等价的，用var声明的变量既是全局变量，也是顶层变量<h5 id="2-let"><a href="#2-let" class="headerlink" title="2.let"></a>2.let</h5></li>
+<li>let是ES6新增的命令，用来声明变量。用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效<span id="more"></span>
+<h5 id="3-const"><a href="#3-const" class="headerlink" title="3.const"></a>3.const</h5></li>
+<li>const声明一个只读的常量，一旦声明，常量的值就不能改变<h4 id="二、区别"><a href="#二、区别" class="headerlink" title="二、区别"></a>二、区别</h4><h5 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h5></li>
+<li>var声明的变量存在变量提升，即变量可以在声明之前调用，值为undefined</li>
+<li>let和const不存在变量提升，即它们所声明的变量一定要在声明后使用，否则报错<h5 id="暂时性死区"><a href="#暂时性死区" class="headerlink" title="暂时性死区"></a>暂时性死区</h5></li>
+<li>var不存在暂时性死区</li>
+<li>let和const存在暂时性死区，只有等到声明变量的那一行代码出现，才可以获取和使用该变量<h5 id="块级作用域"><a href="#块级作用域" class="headerlink" title="块级作用域"></a>块级作用域</h5></li>
+<li>var不存在块级作用域</li>
+<li>let和const存在块级作用域<h5 id="重复声明"><a href="#重复声明" class="headerlink" title="重复声明"></a>重复声明</h5></li>
+<li>var允许重复声明变量</li>
+<li>let和const在同一作用域不允许重复声明变量<h5 id="修改声明的变量"><a href="#修改声明的变量" class="headerlink" title="修改声明的变量"></a>修改声明的变量</h5></li>
+<li>var和let可以</li>
+<li>const声明一个只读的常量。一旦声明，常量的值就不能改变<h5 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h5></li>
+<li>能用const的情况尽量使用const，其他情况下大多数使用let，避免使用var</li>
+</ul>
+]]></content>
+      <categories>
+        <category>面试题</category>
+      </categories>
+  </entry>
+</search>
